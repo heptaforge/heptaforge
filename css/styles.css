@@ -299,3 +299,36 @@ button {
     font-size: 1.25rem;
 
 }
+.hero-principles {
+
+    margin-top: 2.5rem;
+
+    display: grid;
+
+    gap: .9rem;
+
+    color: var(--color-text-muted);
+
+    font-weight: 500;
+
+}
+
+.hero-principles li {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: .75rem;
+
+}
+
+.hero-principles li::before {
+
+    content: "✓";
+
+    color: var(--color-primary);
+
+    font-weight: 700;
+
+}
