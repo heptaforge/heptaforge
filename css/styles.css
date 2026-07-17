@@ -1,334 +1,131 @@
-/* ===========================
-   Global Reset
-=========================== */
+/* ==========================================================
+   HeptaForge Website v1.0
+   File: styles.css
+   Purpose: Global Styles & Layout Foundation
+========================================================== */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+/* ==========================================================
+   CSS RESET
+========================================================== */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* ===========================
-   Body
-=========================== */
-
-body {
-    font-family: "Inter", sans-serif;
-
-    background: var(--color-bg);
-
-    color: var(--color-text);
-
-    line-height: 1.6;
-
-    overflow-x: hidden;
+html{
+    scroll-behavior:smooth;
 }
 
-/* ===========================
-   Images
-=========================== */
+body{
 
-img {
-    display: block;
-    max-width: 100%;
+    background:var(--color-bg);
+    color:var(--color-text);
+
+    font-family:var(--font-primary);
+    font-size:var(--text-body);
+    font-weight:var(--weight-regular);
+    line-height:1.6;
+
+    -webkit-font-smoothing:antialiased;
 }
 
-/* ===========================
-   Links
-=========================== */
-
-a {
-    color: inherit;
-    text-decoration: none;
+img{
+    display:block;
+    max-width:100%;
 }
 
-/* ===========================
-   Lists
-=========================== */
-
-ul {
-    list-style: none;
+a{
+    color:inherit;
+    text-decoration:none;
 }
 
-/* ===========================
-   Buttons
-=========================== */
-
-button {
-    font: inherit;
-    cursor: pointer;
+ul{
+    list-style:none;
 }
-/* ==========================================
-   HEADER
-========================================== */
 
-.header {
+button{
+    border:none;
+    background:none;
+    font:inherit;
+    cursor:pointer;
+}
 
-.header {
 
-    position: sticky;
-    top: 0;
+/* ==========================================================
+   GLOBAL TYPOGRAPHY
+========================================================== */
 
-    z-index: 1000;
+h1,
+h2,
+h3,
+h4{
 
-    background: rgba(15,17,21,.90);
-
-    backdrop-filter: blur(12px);
-
-    border-bottom: 1px solid var(--color-border);
+    font-weight:var(--weight-bold);
+    line-height:1.1;
 
 }
 
+h1{
+    font-size:var(--text-display);
 }
 
-.container {
-
-    width: min(92%, var(--max-width));
-
-    margin-inline: auto;
-
+h2{
+    font-size:var(--text-h2);
 }
 
-.header .container {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    padding: 1.25rem 0;
-
+h3{
+    font-size:var(--text-h3);
 }
 
-.logo {
+p{
+    color:var(--color-text-muted);
+}
 
-    font-size: 2.5rem;
+strong{
+    color:var(--color-text);
+}
 
-    font-weight: 800;
 
-    letter-spacing: 2px;
+/* ==========================================================
+   LAYOUT
+========================================================== */
 
-    color: var(--color-text);
+.container{
 
-    transition: var(--transition);
+    width:min(100% - 3rem,var(--container-width));
+
+    margin-inline:auto;
 
 }
 
-.nav-links {
+section{
 
-    display: flex;
-
-    gap: 2rem;
+    padding:var(--space-4xl) 0;
 
 }
 
-.nav-links a {
 
-    position: relative;
+/* ==========================================================
+   COMMON UTILITIES
+========================================================== */
 
-    color: var(--color-text-muted);
+.text-center{
+    text-align:center;
+}
 
-    transition: var(--transition);
+.surface{
+
+    background:var(--color-surface);
 
 }
 
-.nav-links a::after {
+.hidden{
 
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-
-    bottom: -6px;
-
-    width: 0;
-
-    height: 2px;
-
-    background: var(--color-primary);
-
-    transition: var(--transition);
-
-}
-
-.nav-links a:hover {
-
-    color: var(--color-text);
-
-}
-
-.nav-links a:hover::after {
-
-    width: 100%;
-
-}
-/* ==========================================
-   HERO
-========================================== */
-
-.hero {
-
-    min-height: calc(100vh - 85px);
-
-    display: flex;
-
-    align-items: center;
-
-}
-
-.hero-content {
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    align-items: center;
-
-    gap: 5rem;
-
-}
-
-.eyebrow {
-
-    color: var(--color-primary);
-
-    font-size: .9rem;
-
-    font-weight: 700;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 1rem;
-
-}
-
-.hero h1 {
-
-    font-size: clamp(3rem, 6vw, 5rem);
-
-    line-height: 1.05;
-
-    margin-bottom: 1.5rem;
-
-}
-
-.hero h1 span {
-
-    color: var(--color-primary);
-
-}
-
-.hero-description {
-
-    color: var(--color-text-muted);
-
-    font-size: 1.1rem;
-
-    max-width: 550px;
-
-    margin-bottom: 2.5rem;
-
-}
-
-.hero-buttons {
-
-    display: flex;
-
-    gap: 1rem;
-
-}
-
-.btn {
-
-    padding: 1rem 2rem;
-
-    border-radius: var(--radius);
-
-    font-weight: 600;
-
-    transition: var(--transition);
-
-}
-
-.btn-primary {
-
-    background: var(--color-primary);
-
-    color: white;
-
-}
-
-.btn-primary:hover {
-
-    background: var(--color-primary-hover);
-
-}
-
-.btn-secondary {
-
-    border: 1px solid var(--color-border);
-
-}
-
-.btn-secondary:hover {
-
-    border-color: var(--color-primary);
-
-    color: var(--color-primary);
-
-}
-
-.placeholder-box {
-
-    aspect-ratio: 1;
-
-    border: 2px dashed var(--color-border);
-
-    border-radius: 20px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    color: var(--color-text-muted);
-
-    font-size: 1.25rem;
-
-}
-.hero-principles {
-
-    margin-top: 2.5rem;
-
-    display: grid;
-
-    gap: .9rem;
-
-    color: var(--color-text-muted);
-
-    font-weight: 500;
-
-}
-
-.hero-principles li {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: .75rem;
-
-}
-
-.hero-principles li::before {
-
-    content: "✓";
-
-    color: var(--color-primary);
-
-    font-weight: 700;
+    display:none;
 
 }
