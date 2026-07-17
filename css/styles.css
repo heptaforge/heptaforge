@@ -217,11 +217,25 @@ section{
 
 .logo{
 
-    font-size:2rem;
+    display:inline-flex;
+    align-items:center;
 
+    font-size:2rem;
     font-weight:var(--weight-bold);
 
     letter-spacing:.02em;
+
+}
+
+.logo-primary{
+
+    color:var(--color-text);
+
+}
+
+.logo-accent{
+
+    color:var(--color-primary);
 
 }
 
