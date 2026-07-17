@@ -80,6 +80,7 @@
     --space-2xl: 4rem;
     --space-3xl: 6rem;
     --space-4xl: 8rem;
+    --space-nav:2.5rem;
 
 
 
@@ -87,7 +88,7 @@
        LAYOUT
        ====================================================== */
 
-    --container-width: 1280px;
+    --container-width: 1400px;
 
     --header-height: 90px;
 
