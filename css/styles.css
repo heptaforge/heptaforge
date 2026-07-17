@@ -260,3 +260,44 @@ section{
     color:var(--color-primary);
 
 }
+
+/* ===========================
+   Hero
+=========================== */
+
+.hero {
+    padding: 8rem 2rem;
+}
+
+.hero .container {
+    max-width: 800px;
+}
+
+.hero-eyebrow {
+    font-size: 0.9rem;
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.12em;
+    text-transform: none;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.hero-title {
+    font-size: clamp(2.75rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.hero-description {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    max-width: 700px;
+    margin-bottom: 2.5rem;
+    color: var(--color-text-muted);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
